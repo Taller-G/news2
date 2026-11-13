@@ -7,6 +7,11 @@
   gap: 2.5rem;
 }
 
+.fun-facts__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .fun-facts__nav a {
   text-decoration: none;
   color: var(--text-dim);

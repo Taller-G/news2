@@ -1,0 +1,199 @@
+.ubicacion {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ubicacion__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.ubicacion__nav a {
+  text-decoration: none;
+  color: var(--text-dim);
+}
+
+.ubicacion__nav a:hover {
+  color: var(--text);
+}
+
+.ubicacion__hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ubicacion__title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ubicacion__intro {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.ubicacion__live {
+  margin: 0;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+}
+
+.ubicacion__live-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--accent-2);
+  animation: ubicacion-blink 1.4s ease-in-out infinite;
+}
+
+.ubicacion__map-wrap {
+  background: radial-gradient(circle at 50% 30%, var(--surface-2), var(--surface) 70%);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.ubicacion__map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ubicacion__land polygon,
+.ubicacion__land ellipse {
+  fill: #2c3061;
+  stroke: rgba(76, 201, 240, 0.25);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.ubicacion__marker {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+.ubicacion__marker.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.ubicacion__dot {
+  fill: var(--accent);
+  stroke: #0f1021;
+  stroke-width: 1;
+}
+
+.ubicacion__halo {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.ubicacion__marker.is-active .ubicacion__halo {
+  animation: ubicacion-pulse 2.4s ease-out infinite;
+  animation-delay: var(--pulse-delay, 0s);
+}
+
+.ubicacion__label {
+  fill: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  paint-order: stroke;
+  stroke: #0f1021;
+  stroke-width: 4;
+  pointer-events: none;
+}
+
+.ubicacion__marker.is-active:hover .ubicacion__label {
+  opacity: 1;
+}
+
+.ubicacion__footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+@keyframes ubicacion-pulse {
+  0% {
+    transform: scale(0.35);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes ubicacion-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ubicacion__marker.is-active .ubicacion__halo {
+    animation: none;
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+
+  .ubicacion__live-dot {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ubicacion {
+    padding: 1.5rem 1rem 3rem;
+    gap: 1.2rem;
+  }
+
+  .ubicacion__map-wrap {
+    padding: 0.5rem;
+  }
+
+  .ubicacion__live {
+    font-size: 0.8rem;
+  }
+}

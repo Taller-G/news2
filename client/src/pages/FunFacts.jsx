@@ -46,6 +46,7 @@ export default function FunFacts() {
     <main className="fun-facts">
       <nav className="fun-facts__nav">
         <Link to="/">← Volver al inicio</Link>
+        <Link to="/ubicacion">📍 Ubicación</Link>
       </nav>
 
       <header className="fun-facts__hero">
