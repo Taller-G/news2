@@ -1,0 +1,32 @@
+.joke-ticker {
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 183, 3, 0.07);
+  padding: 0.7rem 0;
+}
+
+.joke-ticker__track {
+  display: inline-flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: ticker-scroll 60s linear infinite;
+}
+
+.joke-ticker__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.joke-ticker__item {
+  color: var(--accent);
+  font-size: 0.95rem;
+}

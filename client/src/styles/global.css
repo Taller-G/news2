@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f1021;
+  --surface: #1b1d3a;
+  --surface-2: #24274d;
+  --text: #f1f0ff;
+  --text-dim: #a9a7c9;
+  --accent: #ffb703;
+  --accent-2: #ff5d8f;
+  --accent-3: #4cc9f0;
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+a {
+  color: var(--accent-3);
+}

@@ -1,0 +1,130 @@
+.fun-facts {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.fun-facts__nav a {
+  text-decoration: none;
+  color: var(--text-dim);
+}
+
+.fun-facts__nav a:hover {
+  color: var(--text);
+}
+
+.fun-facts__hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.fun-facts__avatar {
+  font-size: 4.5rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, var(--surface-2), var(--surface));
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 40px rgba(255, 183, 3, 0.25);
+}
+
+.fun-facts__title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fun-facts__intro {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.fun-facts__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fun-facts__heading {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.fun-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.fun-facts__quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fun-facts__bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fun-facts__state {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fun-facts__error {
+  margin: 0;
+  color: #ff8fa3;
+  font-size: 1.1rem;
+}
+
+.fun-facts__error--inline {
+  background: rgba(255, 93, 143, 0.12);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+}
+
+.fun-facts__empty {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 1.2rem;
+}
+
+.fun-facts__retry {
+  background: var(--accent-3);
+  border: none;
+  color: #0f1021;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.fun-facts__footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}

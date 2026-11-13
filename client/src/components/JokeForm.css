@@ -1,0 +1,87 @@
+.joke-form {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px dashed rgba(255, 183, 3, 0.4);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.joke-form__title {
+  margin: 0;
+}
+
+.joke-form__subtitle {
+  margin: 0 0 1rem;
+  color: var(--text-dim);
+}
+
+.joke-form__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.joke-form__input,
+.joke-form__textarea {
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  resize: vertical;
+}
+
+.joke-form__input:focus,
+.joke-form__textarea:focus {
+  outline: 2px solid var(--accent-3);
+  border-color: transparent;
+}
+
+.joke-form__counter {
+  align-self: flex-end;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.joke-form__counter--over {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.joke-form__error {
+  margin: 0;
+  color: #ff8fa3;
+  background: rgba(255, 93, 143, 0.12);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.joke-form__success {
+  margin: 0;
+  color: #9ef0c0;
+  background: rgba(76, 240, 160, 0.1);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.joke-form__submit {
+  margin-top: 0.8rem;
+  align-self: flex-start;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #1b1d3a;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.joke-form__submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
